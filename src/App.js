@@ -1,7 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import HistogramChart from "./Histogramme";
 import DonutChart from "./DonutChart";
+import PieChartAllDevs from "./PieChartAllDevs";
+import WebDeployed from "./WebDeployed";
+import MobileDeployed from "./MobileDeployed";
 
 function App() {
     const data = {
@@ -1470,197 +1472,897 @@ function App() {
             }
         ]
     }
-    const donutData = [
+    const donutData =[
         {
             "count": 1,
-            "specialite": "Java Developer"
-        },
-        {
-            "count": 1,
-            "specialite": "Project Director"
-        },
-        {
-            "count": 3,
-            "specialite": "Functional QA Engineer"
-        },
-        {
-            "count": 1,
-            "specialite": "Tech Lead iOS"
-        },
-        {
-            "count": 3,
-            "specialite": "Ingénieur Etude et Développement"
-        },
-        {
-            "count": 1,
-            "specialite": "IOS Developer"
-        },
-        {
-            "count": 1,
-            "specialite": "Frontend Developer"
-        },
-        {
-            "count": 1,
-            "specialite": "Functional QA Engineer/Alternant"
-        },
-        {
-            "count": 1,
-            "specialite": "PFE2023"
-        },
-        {
-            "count": 1,
-            "specialite": "Technical Lead JAVA"
-        },
-        {
-            "count": 1,
-            "specialite": "Tech Lead JAVA"
-        },
-        {
-            "count": 1,
-            "specialite": "Business Manager"
-        },
-        {
-            "count": 1,
-            "specialite": "Python Developer"
-        },
-        {
-            "count": 1,
-            "specialite": "Chargé de Recrutement"
-        },
-        {
-            "count": 12,
-            "specialite": "Unassigned"
-        },
-        {
-            "count": 1,
-            "specialite": "QA Auto"
-        },
-        {
-            "count": 3,
-            "specialite": "PHP Developer"
-        },
-        {
-            "count": 4,
-            "specialite": "QA Engineer"
-        },
-        {
-            "count": 1,
-            "specialite": "IT Manager"
-        },
-        {
-            "count": 1,
-            "specialite": "Ingénieur QA"
-        },
-        {
-            "count": 1,
-            "specialite": "Chargée de Ressources Humaines"
-        },
-        {
-            "count": 1,
-            "specialite": "Tech Lead WEB"
-        },
-        {
-            "count": 1,
-            "specialite": "HR Director"
-        },
-        {
-            "count": 1,
-            "specialite": "Consultant Android"
-        },
-        {
-            "count": 1,
-            "specialite": "Talent Acquisition "
-        },
-        {
-            "count": 1,
-            "specialite": "Senior IT System Engineer"
-        },
-        {
-            "count": 1,
-            "specialite": "QA Automation"
-        },
-        {
-            "count": 1,
-            "specialite": "Talent Acquisition"
-        },
-        {
-            "count": 2,
-            "specialite": "Consultant"
-        },
-        {
-            "count": 2,
-            "specialite": "JAVA Developer"
-        },
-        {
-            "count": 3,
-            "specialite": "Dev Web"
-        },
-        {
-            "count": 17,
-            "specialite": "Stagiaire PFE2023"
-        },
-        {
-            "count": 3,
-            "specialite": "Android Developer"
-        },
-        {
-            "count": 1,
-            "specialite": "Développeur Web"
-        },
-        {
-            "count": 4,
-            "specialite": "Product Owner"
-        },
-        {
-            "count": 1,
-            "specialite": "Responsable Pôle Web"
-        },
-        {
-            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5a4"
+            ],
             "specialite": "Product owner"
         },
         {
             "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5c3"
+            ],
             "specialite": "Développeur Web Frontend"
         },
         {
             "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5aa"
+            ],
+            "specialite": "Chargée de Ressources Humaines"
+        },
+        {
+            "count": 3,
+            "users": [
+                "6477d170c8999d49d569f5d1",
+                "6477d170c8999d49d569f5cb",
+                "6477d170c8999d49d569f5cc"
+            ],
+            "specialite": "PHP Developer"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5d6"
+            ],
             "specialite": "iOS Developer"
         },
         {
             "count": 3,
+            "users": [
+                "6477d170c8999d49d569f5a6",
+                "6477d170c8999d49d569f5e5",
+                "6477d170c8999d49d569f5f9"
+            ],
             "specialite": "DevOps Engineer"
         },
         {
             "count": 1,
-            "specialite": "Consultant Manager"
+            "users": [
+                "6477d170c8999d49d569f5f8"
+            ],
+            "specialite": "HR Director"
         },
         {
             "count": 5,
+            "users": [
+                "6477d170c8999d49d569f5be",
+                "6477d170c8999d49d569f5cf",
+                "6477d170c8999d49d569f5da",
+                "6477d170c8999d49d569f5fb",
+                "6477d170c8999d49d569f5fd"
+            ],
             "specialite": "Scrum Master"
         },
         {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f603"
+            ],
+            "specialite": "Consultant Manager"
+        },
+        {
+            "count": 2,
+            "users": [
+                "6477d170c8999d49d569f5ce",
+                "6477d170c8999d49d569f5f4"
+            ],
+            "specialite": "Consultant"
+        },
+        {
+            "count": 2,
+            "users": [
+                "6477d170c8999d49d569f5b2",
+                "6477d170c8999d49d569f5fa"
+            ],
+            "specialite": "JAVA Developer"
+        },
+        {
+            "count": 3,
+            "users": [
+                "6477d170c8999d49d569f5a0",
+                "6477d170c8999d49d569f5b8",
+                "6477d170c8999d49d569f5e9"
+            ],
+            "specialite": "Android Developer"
+        },
+        {
+            "count": 3,
+            "users": [
+                "63ea066adf7154131ced520f",
+                "63ea067edf7154131ced5213",
+                "63ea02b4b7df45dddcf47ebc"
+            ],
+            "specialite": "Dev Web"
+        },
+        {
+            "count": 17,
+            "users": [
+                "6477d170c8999d49d569f5a2",
+                "6477d170c8999d49d569f5ab",
+                "6477d170c8999d49d569f5b1",
+                "6477d170c8999d49d569f5a1",
+                "6477d170c8999d49d569f5ae",
+                "6477d170c8999d49d569f5b6",
+                "6477d170c8999d49d569f5c1",
+                "6477d170c8999d49d569f5c2",
+                "6477d170c8999d49d569f5c7",
+                "6477d170c8999d49d569f5d8",
+                "6477d170c8999d49d569f5dd",
+                "6477d170c8999d49d569f5de",
+                "6477d170c8999d49d569f5e3",
+                "6477d170c8999d49d569f5ec",
+                "6477d170c8999d49d569f5f1",
+                "6477d170c8999d49d569f5f2",
+                "6477d170c8999d49d569f5f5"
+            ],
+            "specialite": "Stagiaire PFE2023"
+        },
+        {
+            "count": 4,
+            "users": [
+                "6477d170c8999d49d569f5af",
+                "6477d170c8999d49d569f5ac",
+                "6477d170c8999d49d569f5dc",
+                "6477d170c8999d49d569f5ef"
+            ],
+            "specialite": "Product Owner"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5e1"
+            ],
+            "specialite": "Responsable Pôle Web"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f602"
+            ],
+            "specialite": "Développeur Web"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5b9"
+            ],
+            "specialite": "Team Lead Mobile"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5e6"
+            ],
+            "specialite": "Consultant Android"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5a9"
+            ],
+            "specialite": "Java Developer"
+        },
+        {
             "count": 8,
+            "users": [
+                "6477d170c8999d49d569f5b7",
+                "6477d170c8999d49d569f5bb",
+                "6477d170c8999d49d569f5bc",
+                "6477d170c8999d49d569f5cd",
+                "6477d170c8999d49d569f5c6",
+                "6477d170c8999d49d569f5f6",
+                "6477d170c8999d49d569f5fc",
+                "6477d170c8999d49d569f5e7"
+            ],
             "specialite": "Stage PFE 2023"
         },
         {
             "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5ff"
+            ],
             "specialite": "Fullstack Developer"
         },
         {
             "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5c0"
+            ],
             "specialite": "Senior ColdFusion Developer"
         },
         {
             "count": 1,
-            "specialite": "Team Lead Mobile"
+            "users": [
+                "6477d170c8999d49d569f5ba"
+            ],
+            "specialite": "Functional QA Engineer/Alternant"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5ad"
+            ],
+            "specialite": "Tech Lead JAVA"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5ca"
+            ],
+            "specialite": "PFE2023"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5a3"
+            ],
+            "specialite": "Business Manager"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5d7"
+            ],
+            "specialite": "Python Developer"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5eb"
+            ],
+            "specialite": "Chargé de Recrutement"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5ee"
+            ],
+            "specialite": "Technical Lead JAVA"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5a5"
+            ],
+            "specialite": "Project Director"
+        },
+        {
+            "count": 3,
+            "users": [
+                "6477d170c8999d49d569f5b5",
+                "6477d170c8999d49d569f5b3",
+                "6477d170c8999d49d569f5df"
+            ],
+            "specialite": "Functional QA Engineer"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5d9"
+            ],
+            "specialite": "Tech Lead iOS"
+        },
+        {
+            "count": 3,
+            "users": [
+                "6477d170c8999d49d569f5c4",
+                "6477d170c8999d49d569f5f7",
+                "6477d170c8999d49d569f5fe"
+            ],
+            "specialite": "Ingénieur Etude et Développement"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5e8"
+            ],
+            "specialite": "IOS Developer"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f600"
+            ],
+            "specialite": "Frontend Developer"
+        },
+        {
+            "count": 1,
+            "users": [
+                "64819d77f72874897eb7d69e"
+            ],
+            "specialite": "Web Dev"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5d3"
+            ],
+            "specialite": "Talent Acquisition "
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5ea"
+            ],
+            "specialite": "Senior IT System Engineer"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5e4"
+            ],
+            "specialite": "Talent Acquisition"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5db"
+            ],
+            "specialite": "QA Automation"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5a7"
+            ],
+            "specialite": "QA Auto"
+        },
+        {
+            "count": 12,
+            "users": [
+                "6477d170c8999d49d569f5b0",
+                "6477d170c8999d49d569f5b4",
+                "6477d170c8999d49d569f5bd",
+                "6477d170c8999d49d569f5c5",
+                "6477d170c8999d49d569f5c8",
+                "6477d170c8999d49d569f5c9",
+                "6477d170c8999d49d569f5d2",
+                "6477d170c8999d49d569f5d4",
+                "6477d170c8999d49d569f5d5",
+                "6477d170c8999d49d569f5e0",
+                "6477d170c8999d49d569f5f3",
+                "6477d170c8999d49d569f5f0"
+            ],
+            "specialite": "null"
+        },
+        {
+            "count": 4,
+            "users": [
+                "6477d170c8999d49d569f5d0",
+                "6477d170c8999d49d569f5e2",
+                "6477d170c8999d49d569f5ed",
+                "6477d170c8999d49d569f601"
+            ],
+            "specialite": "QA Engineer"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5a8"
+            ],
+            "specialite": "Ingénieur QA"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f59f"
+            ],
+            "specialite": "IT Manager"
+        },
+        {
+            "count": 1,
+            "users": [
+                "6477d170c8999d49d569f5bf"
+            ],
+            "specialite": "Tech Lead WEB"
         }
     ]
-  return (
+    const projets = [
+        {
+            "_id": "6479f8706c4c44a7c846aa79",
+            "project": "6479f8706c4c44a7c846aa78",
+            "equipe": [
+                "6477d170c8999d49d569f5cc",
+                "63ea02b4b7df45dddcf47ebc",
+                "63ea067edf7154131ced5213",
+                "63ea066adf7154131ced520f",
+                "6477d170c8999d49d569f5cb",
+                "6477d170c8999d49d569f5da"
+            ],
+            "__v": 93
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa7f",
+            "project": "6479f8706c4c44a7c846aa7e",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa82",
+            "project": "6479f8706c4c44a7c846aa81",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa7c",
+            "project": "6479f8706c4c44a7c846aa7b",
+            "equipe": [],
+            "__v": 2
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa85",
+            "project": "6479f8706c4c44a7c846aa84",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa88",
+            "project": "6479f8706c4c44a7c846aa87",
+            "equipe": [
+                "6477d170c8999d49d569f5a0",
+                "6477d170c8999d49d569f5b8",
+                "6477d170c8999d49d569f5e6",
+                "6477d170c8999d49d569f5e9"
+            ],
+            "__v": 4
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa8b",
+            "project": "6479f8706c4c44a7c846aa8a",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa8e",
+            "project": "6479f8706c4c44a7c846aa8d",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa91",
+            "project": "6479f8706c4c44a7c846aa90",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa94",
+            "project": "6479f8706c4c44a7c846aa93",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa97",
+            "project": "6479f8706c4c44a7c846aa96",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa9a",
+            "project": "6479f8706c4c44a7c846aa99",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aa9d",
+            "project": "6479f8706c4c44a7c846aa9c",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaa0",
+            "project": "6479f8706c4c44a7c846aa9f",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaa9",
+            "project": "6479f8706c4c44a7c846aaa8",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaac",
+            "project": "6479f8706c4c44a7c846aaab",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaaf",
+            "project": "6479f8706c4c44a7c846aaae",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aab2",
+            "project": "6479f8706c4c44a7c846aab1",
+            "equipe": [
+                "6477d170c8999d49d569f5d6",
+                "6477d170c8999d49d569f5d9",
+                "6477d170c8999d49d569f5e8"
+            ],
+            "__v": 3
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aab5",
+            "project": "6479f8706c4c44a7c846aab4",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aab8",
+            "project": "6479f8706c4c44a7c846aab7",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aabe",
+            "project": "6479f8706c4c44a7c846aabd",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aac1",
+            "project": "6479f8706c4c44a7c846aac0",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aabb",
+            "project": "6479f8706c4c44a7c846aaba",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aac4",
+            "project": "6479f8706c4c44a7c846aac3",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aac7",
+            "project": "6479f8706c4c44a7c846aac6",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaca",
+            "project": "6479f8706c4c44a7c846aac9",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aacd",
+            "project": "6479f8706c4c44a7c846aacc",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aad0",
+            "project": "6479f8706c4c44a7c846aacf",
+            "equipe": [
+                "6477d170c8999d49d569f5a9",
+                "6477d170c8999d49d569f5ad",
+                "6477d170c8999d49d569f5b2",
+                "6477d170c8999d49d569f5ee",
+                "6477d170c8999d49d569f5fa"
+            ],
+            "__v": 5
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aad3",
+            "project": "6479f8706c4c44a7c846aad2",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aad6",
+            "project": "6479f8706c4c44a7c846aad5",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aad9",
+            "project": "6479f8706c4c44a7c846aad8",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aadc",
+            "project": "6479f8706c4c44a7c846aadb",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aadf",
+            "project": "6479f8706c4c44a7c846aade",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aae2",
+            "project": "6479f8706c4c44a7c846aae1",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aae5",
+            "project": "6479f8706c4c44a7c846aae4",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aae8",
+            "project": "6479f8706c4c44a7c846aae7",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaeb",
+            "project": "6479f8706c4c44a7c846aaea",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaee",
+            "project": "6479f8706c4c44a7c846aaed",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaf1",
+            "project": "6479f8706c4c44a7c846aaf0",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaf4",
+            "project": "6479f8706c4c44a7c846aaf3",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaf7",
+            "project": "6479f8706c4c44a7c846aaf6",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aafa",
+            "project": "6479f8706c4c44a7c846aaf9",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aafd",
+            "project": "6479f8706c4c44a7c846aafc",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab00",
+            "project": "6479f8706c4c44a7c846aaff",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab03",
+            "project": "6479f8706c4c44a7c846ab02",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab06",
+            "project": "6479f8706c4c44a7c846ab05",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab09",
+            "project": "6479f8706c4c44a7c846ab08",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab0c",
+            "project": "6479f8706c4c44a7c846ab0b",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab0f",
+            "project": "6479f8706c4c44a7c846ab0e",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab12",
+            "project": "6479f8706c4c44a7c846ab11",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab15",
+            "project": "6479f8706c4c44a7c846ab14",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab18",
+            "project": "6479f8706c4c44a7c846ab17",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab1b",
+            "project": "6479f8706c4c44a7c846ab1a",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab1e",
+            "project": "6479f8706c4c44a7c846ab1d",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab21",
+            "project": "6479f8706c4c44a7c846ab20",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaa3",
+            "project": "6479f8706c4c44a7c846aaa2",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab27",
+            "project": "6479f8706c4c44a7c846ab26",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab2a",
+            "project": "6479f8706c4c44a7c846ab29",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab2d",
+            "project": "6479f8706c4c44a7c846ab2c",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846aaa6",
+            "project": "6479f8706c4c44a7c846aaa5",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab33",
+            "project": "6479f8706c4c44a7c846ab32",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab36",
+            "project": "6479f8706c4c44a7c846ab35",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab39",
+            "project": "6479f8706c4c44a7c846ab38",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab3c",
+            "project": "6479f8706c4c44a7c846ab3b",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab3f",
+            "project": "6479f8706c4c44a7c846ab3e",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab42",
+            "project": "6479f8706c4c44a7c846ab41",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab45",
+            "project": "6479f8706c4c44a7c846ab44",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab48",
+            "project": "6479f8706c4c44a7c846ab47",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab4b",
+            "project": "6479f8706c4c44a7c846ab4a",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab4e",
+            "project": "6479f8706c4c44a7c846ab4d",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab51",
+            "project": "6479f8706c4c44a7c846ab50",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab5a",
+            "project": "6479f8706c4c44a7c846ab59",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab54",
+            "project": "6479f8706c4c44a7c846ab53",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab57",
+            "project": "6479f8706c4c44a7c846ab56",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8716c4c44a7c846ab6b",
+            "project": "6479f8716c4c44a7c846ab6a",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8716c4c44a7c846ab6e",
+            "project": "6479f8716c4c44a7c846ab6d",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab30",
+            "project": "6479f8706c4c44a7c846ab2f",
+            "equipe": [],
+            "__v": 0
+        },
+        {
+            "_id": "6479f8706c4c44a7c846ab24",
+            "project": "6479f8706c4c44a7c846ab23",
+            "equipe": [],
+            "__v": 0
+        }
+    ]
+
+    return (
     <div className="App">
       <header className="App-header">
           {/*<HistogramChart data ={data.results}></HistogramChart>*/}
-          <DonutChart data ={donutData}></DonutChart>
+          {/*<DonutChart data={donutData}></DonutChart>*/}
+          {/*<PieChartAllDevs data={donutData} projets={projets}></PieChartAllDevs>*/}
+          <WebDeployed  data={donutData} projets={projets}></WebDeployed>
+          <MobileDeployed  data={donutData} projets={projets}></MobileDeployed>
+
       </header>
     </div>
   );
