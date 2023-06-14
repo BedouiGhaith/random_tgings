@@ -577,6 +577,7 @@ const WheelChart = ({ data }) => {
         };
     }, [data]);
 
+
     const createChart = () => {
         const chartOptions = {
             chart: {

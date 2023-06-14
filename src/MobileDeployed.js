@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import ApexCharts from 'apexcharts';
+import MobileDeployedDetails from "./MobileDeployedDetails";
 
 const MobileDeployed = ({ data, projets }) => {
     const chartRef = useRef(null);
@@ -104,7 +105,7 @@ const MobileDeployed = ({ data, projets }) => {
         }
     };
 
-    return <div ref={chartRef} />;
+    return <><div ref={chartRef} /><MobileDeployedDetails data={data} projets={projets}></MobileDeployedDetails></>;
 };
 
 export default MobileDeployed;

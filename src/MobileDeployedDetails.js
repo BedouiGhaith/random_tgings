@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ApexCharts from 'apexcharts';
 
-const WebDeployedDetails = ({ data, projets }) => {
+const MobileDeployedDetails = ({ data, projets }) => {
     const chartRef = useRef(null);
     let chart = null;
 
@@ -66,7 +66,7 @@ const WebDeployedDetails = ({ data, projets }) => {
         return usersInProjects;
     };
 
-    const usersInWebProjects = checkUsersInProjects(projets, filterData(data)[0].developers);
+    const usersInWebProjects = checkUsersInProjects(projets, filterData(data)[1].developers);
 
     console.log(usersInWebProjects);
 
@@ -82,8 +82,8 @@ const WebDeployedDetails = ({ data, projets }) => {
         };
     }, [data]);
 
-    const list1 = filterData(data)[0].developers.map((item) => item.specialite);
-    const list2 = filterData(data)[0].developers.map((item) => item.count);
+    const list1 = filterData(data)[1].developers.map((item) => item.specialite);
+    const list2 = filterData(data)[1].developers.map((item) => item.count);
 
     const series = list1.map((item, index) => {
         return {
@@ -97,7 +97,7 @@ const WebDeployedDetails = ({ data, projets }) => {
     const userIds = new Set();
 
     for (const item of projets) {
-       item.equipe.forEach( i => userIds.add(i));
+        item.equipe.forEach( i => userIds.add(i));
     }
 
     console.log(userIds)
@@ -105,22 +105,21 @@ const WebDeployedDetails = ({ data, projets }) => {
         const filteredUsers = item.users.filter((user) => userIds.has(user));
         return { count: filteredUsers.length, users: filteredUsers, specialite: item.specialite };
     });
-console.log("data")
+    console.log("data")
     console.log(filterData(filteredList))
 
     const createChart = () => {
         const chartOptions = {
             series: [{
-            name: 'Deployed',
-            data: filterData(filteredList)[0].developers.map((item, index) => (item.count*100/filterData(data)[0].developers[index].count).toFixed(2))
-        }, {
-            name: 'On Hold',
-            data: filterData(data)[0].developers.map((item, index) => (((item.count-filterData(filteredList)[0].developers[index].count))*100/item.count).toFixed(2))
-        }],
+                name: 'Deployed',
+                data: filterData(filteredList)[1].developers.map((item) => item.count)
+            }, {
+                name: 'On Hold',
+                data: filterData(data)[1].developers.map((item, index) => (item.count-filterData(filteredList)[1].developers[index].count))
+            }],
             chart: {
                 type: 'bar',
                 height: 350,
-                width: 600,
                 stacked: true,
             },
             plotOptions: {
@@ -143,18 +142,17 @@ console.log("data")
                 colors: ['#fff']
             },
             title: {
-                text: 'Title'
+                text: 'Fiction Books Sales'
             },
             xaxis: {
                 categories: list1,
                 labels: {
                     formatter: function (val) {
-                        return val + "%"
+                        return val + "K"
                     }
                 }
             },
             yaxis: {
-                max: 100,
                 title: {
                     text: undefined
                 },
@@ -162,19 +160,9 @@ console.log("data")
             tooltip: {
                 y: {
                     formatter: function (val) {
-                        return val + "%";
+                        return val + "K"
                     }
-                },
-                enabled: true, // Add this line to enable tooltips
-                style: {
-                    fontSize: '12px', // Customize the tooltip font size if needed
-                    fontWeight: 500, // Customize the tooltip font weight if needed
-                    color: '#000000',
-                },
-                marker: {
-                    show: true, // Add this line to show markers in tooltips if desired
-                },
-
+                }
             },
             fill: {
                 opacity: 1
@@ -195,4 +183,4 @@ console.log("data")
     return <div ref={chartRef} />;
 };
 
-export default WebDeployedDetails;
+export default MobileDeployedDetails;
